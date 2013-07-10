@@ -1,4 +1,4 @@
-class Stopwatch {
+class AGStopwatch {
 	private _startTime: number;
 	public get startTime() {
 		return this._startTime;
@@ -30,4 +30,4 @@ class Stopwatch {
 	}
 }
 
-export = Stopwatch;
+export = AGStopwatch;
