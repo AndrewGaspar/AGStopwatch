@@ -1,0 +1,24 @@
+{
+  "name": "AGStopwatch",
+  "version": "0.0.1",
+  "description": "",
+  "main": "agstopwatch.js",
+  "scripts": {
+	"prepublish": "tsc -d -c agstopwatch.ts",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewGaspar/AGStopwatch.git"
+  },
+  "keywords": [
+    "stopwatch",
+    "timer",
+    "typescript"
+  ],
+  "author": "Andrew Gaspar",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/AndrewGaspar/AGStopwatch/issues"
+  }
+}
