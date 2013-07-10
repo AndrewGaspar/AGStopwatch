@@ -1,10 +1,10 @@
 {
   "name": "agstopwatch",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "AGStopwatch.js",
   "scripts": {
-	"prepublish": "tsc -d -c --target ES5 AGStopwatch.ts",
+    "prepublish": "tsc -d -c --target ES5 AGStopwatch.ts",
     "test": "mocha"
   },
   "repository": {
