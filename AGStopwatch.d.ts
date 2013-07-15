@@ -4,10 +4,11 @@ declare class AGStopwatch {
     private _stopTime;
     public stopTime : number;
     public elapsed : number;
-    public start(): void;
+    public start(): number;
     public stop(): number;
-    public restart(): void;
-    public reset(): void;
-    public running(): boolean;
+    public restart(): number;
+    public reset(): number;
+    private _running;
+    public running : boolean;
 }
 export = AGStopwatch;

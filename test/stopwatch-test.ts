@@ -15,7 +15,7 @@ describe("Stopwatch tests", function () {
 
     it("should return 0 ms elapsed after instantation", function () {
         var sw = new AGStopwatch();
-        assert(sw.elapsed == 0);
+        assert(sw.elapsed === 0);
     });
     
     it("should return 0 ms elapsed after being reset", function () {
@@ -24,7 +24,7 @@ describe("Stopwatch tests", function () {
         while (Date.now() < start + 1000);
         sw.stop();
         sw.reset();
-        assert(sw.elapsed == 0);
+        assert(sw.elapsed === 0);
     });
 
     it("should return running = true while running and running = false while not running", function () {
