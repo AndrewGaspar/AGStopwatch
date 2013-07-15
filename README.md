@@ -38,7 +38,10 @@ Starts the stopwatch.
 Stops the stopwatch.
 
 ###Stopwatch.restart()
-Resets the stopwatch.
+Clears current start time and restarts the stopwatch.
+
+###Stopwatch.reset()
+Clears current start and end time and stops the stopwatch.
 
 ###Stopwatch.startTime
 The time the stopwatch was started (in ms).
@@ -48,3 +51,6 @@ The time the stopwatch was stopped (in ms).
 
 ###Stopwatch.elapsed
 The time elapsed (in ms).
+
+##Stopwatch.running
+Returns true if the stopwatch is running.

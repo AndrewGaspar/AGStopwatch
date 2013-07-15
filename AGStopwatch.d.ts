@@ -7,5 +7,7 @@ declare class AGStopwatch {
     public start(): void;
     public stop(): number;
     public restart(): void;
+    public reset(): void;
+    public running(): boolean;
 }
 export = AGStopwatch;
