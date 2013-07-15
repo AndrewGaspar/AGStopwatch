@@ -10,24 +10,41 @@ class AGStopwatch {
 	}
 
 	public get elapsed() {
-		if (this.startTime === undefined) return 0;
-		return ((this.stopTime === undefined) ? Date.now() : this.stopTime) - this.startTime;
+		return ((this._running ? Date.now() : this._stopTime) - this._startTime) || 0;
 	}
 
 	public start() {
-		if(this._startTime === undefined) this._startTime = Date.now();
+        if (this._running) throw new Error("The stopwatch is already running!"); 
+        this._startTime = Date.now();
+        this._running = true;
+        return this._startTime;
 	}
 
 	public stop() {
-		if (this.startTime === undefined) throw new Error("You must start the timer first!");
-		if (this.stopTime === undefined) this._stopTime = Date.now();
-		return this.elapsed;
+		if (!this._running) throw new Error("You must start the timer first!");
+        this._stopTime = Date.now();
+        this._running = false;
+		return this._stopTime;
 	}
 
 	public restart() {
-		this._startTime = undefined;
-		this._stopTime = undefined;
-	}
+        var elapsed = this.stop();
+        this.start();
+        return elapsed;
+    }
+
+    public reset() {
+        var elapsed = this.elapsed;
+        this._startTime = undefined;
+        this._stopTime = undefined;
+        this._running = false;
+        return elapsed;
+    }
+    
+    private _running: boolean;
+    public get running() {
+        return this._running;
+    }
 }
 
 export = AGStopwatch;
